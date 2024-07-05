@@ -21,7 +21,6 @@ body {
     flex: 1;
 }
 
-/* Custom Cursor */
 .custom-cursor {
     width: 20px;
     height: 20px;
@@ -108,6 +107,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     animation: fadeIn 2s ease-in-out;
+    padding-top: 80px; /* Offset for fixed header */
 }
 
 .hero h2 {
@@ -224,6 +224,12 @@ footer {
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.4em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
