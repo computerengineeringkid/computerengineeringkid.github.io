@@ -95,17 +95,6 @@ nav ul li a:hover {
     color: #ffdd57;
 }
 
-/* Collapsible Menu Styles */
-.menu-icon {
-    display: none;
-    font-size: 2em;
-    cursor: pointer;
-}
-
-#nav-links {
-    display: flex;
-}
-
 /* Hero Section Styles */
 .hero {
     background: url('MR. PANE Window Cleaning.jpg') no-repeat center center;
@@ -237,18 +226,10 @@ footer {
         font-size: 1.4em;
     }
 
-    .menu-icon {
-        display: block;
-    }
-
-    #nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    #nav-links.show {
+    nav ul {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
@@ -307,3 +288,4 @@ footer {
         width: 100%;
     }
 }
+
