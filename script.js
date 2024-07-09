@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
     const customCursor = document.createElement('div');
     customCursor.classList.add('custom-cursor');
     document.body.appendChild(customCursor);
@@ -48,5 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
         element.addEventListener('mouseleave', () => {
             customCursor.classList.remove('black');
         });
+    });
+
+    // Collapsible navigation for mobile
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    navToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
     });
 });

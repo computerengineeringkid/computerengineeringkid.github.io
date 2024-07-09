@@ -1,7 +1,9 @@
+/* style.css */
 /* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     font-family: 'Comfortaa', sans-serif;
@@ -12,7 +14,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    cursor: none; /* Hide the default cursor */
+    cursor: none;
+    /* Hide the default cursor */
 }
 
 .container {
@@ -69,6 +72,7 @@ header h1 {
 nav {
     padding: 10px 0;
     text-align: center;
+    position: relative;
 }
 
 nav ul {
@@ -95,6 +99,16 @@ nav ul li a:hover {
     color: #ffdd57;
 }
 
+.nav-toggle {
+    display: none;
+    background: #004080;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
 /* Hero Section Styles */
 .hero {
     background: url('MR. PANE Window Cleaning.jpg') no-repeat center center;
@@ -107,7 +121,8 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     animation: fadeIn 2s ease-in-out;
-    padding-top: 80px; /* Offset for fixed header */
+    padding-top: 80px;
+    /* Offset for fixed header */
 }
 
 .hero h2 {
@@ -123,7 +138,8 @@ nav ul li a:hover {
 
 /* Section Styles */
 section {
-    padding: 100px 0 60px; /* Added padding-top to account for fixed header */
+    padding: 100px 0 60px;
+    /* Added padding-top to account for fixed header */
 }
 
 section h2 {
@@ -157,7 +173,8 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -165,7 +182,8 @@ form input, form textarea {
     transition: border-color 0.3s ease;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
     border-color: #004080;
 }
 
@@ -190,38 +208,81 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto; /* Push the footer to the bottom */
+    margin-top: auto;
+    /* Push the footer to the bottom */
     animation: fadeInUp 1s ease-in-out;
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInFromLeft {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideInFromRight {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: inline-block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.active {
+        display: block;
+        text-align: left;
+    }
+
     header h1 {
         font-size: 1.4em;
     }
@@ -249,7 +310,10 @@ footer {
         padding: 15px;
     }
 
-    form label, form input, form textarea, form button {
+    form label,
+    form input,
+    form textarea,
+    form button {
         font-size: 1em;
     }
 }
@@ -280,7 +344,10 @@ footer {
         padding: 10px;
     }
 
-    form label, form input, form textarea, form button {
+    form label,
+    form input,
+    form textarea,
+    form button {
         font-size: 0.9em;
     }
 
@@ -288,4 +355,3 @@ footer {
         width: 100%;
     }
 }
-
