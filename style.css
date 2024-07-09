@@ -1,12 +1,12 @@
 /* style.css */
 /* General Styles */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 html,
 body {
     height: 100%;
     margin: 0;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -51,7 +51,7 @@ body {
 
 /* Header Styles */
 header {
-    background: #004080;
+    background: linear-gradient(45deg, #004080, #0074D9);
     color: #fff;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -194,7 +194,7 @@ form textarea:focus {
 }
 
 form button {
-    background: #004080;
+    background: linear-gradient(45deg, #004080, #0074D9);
     color: #fff;
     padding: 10px;
     border: none;
@@ -204,13 +204,13 @@ form button {
 }
 
 form button:hover {
-    background: #003366;
+    background: linear-gradient(45deg, #003366, #0066cc);
     transform: scale(1.05);
 }
 
 /* Footer Styles */
 footer {
-    background: #004080;
+    background: linear-gradient(45deg, #004080, #0074D9);
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -226,6 +226,12 @@ footer {
     align-items: center;
     flex-direction: column;
     margin: 20px auto;
+}
+
+.form-container iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 956px;
 }
 
 /* Animations */
@@ -331,6 +337,11 @@ footer {
     form button {
         font-size: 1em;
     }
+
+    .form-container iframe {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Media Queries for Desktop */
@@ -390,5 +401,9 @@ footer {
 
     img {
         width: 100%;
+    }
+
+    .form-container iframe {
+        height: 100%;
     }
 }
