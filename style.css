@@ -107,6 +107,12 @@ nav ul li a:hover {
     padding: 10px;
     font-size: 1.2em;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    margin-right: 8px;
 }
 
 /* Hero Section Styles */
@@ -213,6 +219,15 @@ footer {
     animation: fadeInUp 1s ease-in-out;
 }
 
+/* Form Container Styles */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -315,6 +330,28 @@ footer {
     form textarea,
     form button {
         font-size: 1em;
+    }
+}
+
+/* Media Queries for Desktop */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        display: inline-block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
     }
 }
 

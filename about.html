@@ -11,6 +11,9 @@
             // Detect device type
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             document.body.classList.add(isMobile ? 'mobile' : 'desktop');
+            if (isMobile) {
+                document.querySelector('.custom-cursor').style.display = 'none';
+            }
         });
     </script>
 </head>
@@ -20,7 +23,9 @@
         <div class="container">
             <h1>Mr. Pane Window Cleaning</h1>
             <nav>
-                <button class="nav-toggle">Menu</button>
+                <button class="nav-toggle">
+                    <span class="menu-icon">&#9776;</span> Menu
+                </button>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
