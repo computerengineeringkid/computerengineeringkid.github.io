@@ -4,53 +4,367 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saguaro Interactive</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <link rel="icon" href="cactus.jpeg" type="image/jpeg">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: #f0f0f0;
-        }
-        .title {
-            font-size: 2rem;
-        }
-        .dots span {
-            display: inline-block;
-            animation: bounce 1s infinite;
-        }
-        .dots span:nth-child(1) {
-            animation-delay: 0s;
-        }
-        .dots span:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .dots span:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="has-text-centered">
-        <h1 class="title">
-            Coming Soon<span class="dots"><span>.</span><span>.</span><span>.</span></span>
-        </h1>
-    </div>
+<body class="bg-slate-950 text-white">
+    <header class="relative overflow-hidden pb-32">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800"></div>
+        <div class="absolute -bottom-20 -left-32 h-96 w-96 rounded-full bg-emerald-600/20 blur-3xl"></div>
+        <div class="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-sky-500/10 blur-3xl"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
+            <nav class="mt-8 flex items-center justify-between rounded-full bg-white/95 px-8 py-4 text-slate-900 shadow-xl">
+                <div class="flex items-center gap-4">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold text-white">SI</div>
+                    <a href="/" class="text-xl font-semibold tracking-wide">Saguaro Interactive</a>
+                </div>
+                <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
+                    <a href="/home" class="transition hover:text-emerald-600">Home</a>
+                    <a href="/about" class="transition hover:text-emerald-600">About Us</a>
+                    <a href="/services" class="transition hover:text-emerald-600">Services</a>
+                    <a href="/portfolio" class="transition hover:text-emerald-600">Portfolio</a>
+                    <a href="/pricing" class="transition hover:text-emerald-600">Pricing</a>
+                    <a href="/contact" class="transition hover:text-emerald-600">Contact</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="/get-started" class="rounded-full bg-emerald-600 px-6 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow hover:bg-emerald-700 transition">Get Started</a>
+                </div>
+            </nav>
+
+            <section class="flex flex-col-reverse lg:flex-row items-center justify-between gap-16 py-24">
+                <div class="max-w-2xl">
+                    <p class="text-xs font-semibold uppercase tracking-[0.5em] text-emerald-300">Custom code. Real results.</p>
+                    <h1 class="mt-6 text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-tight">
+                        Small Business<br>
+                        <span class="text-emerald-300">Big Presence</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-slate-200 leading-relaxed">
+                        Custom code. Real results. No WordPress or Squarespace. Fast, SEO-optimized sites that turn traffic into customers.
+                    </p>
+                    <div class="mt-10 flex flex-wrap items-center gap-4">
+                        <a href="/get-started" class="inline-flex items-center justify-center rounded-full bg-emerald-600 px-7 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-emerald-600/30 transition hover:bg-emerald-500">Get Started</a>
+                        <a href="/about" class="inline-flex items-center justify-center rounded-full border border-white/40 px-7 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:border-emerald-400/80 hover:text-emerald-300">About Us</a>
+                    </div>
+                </div>
+                <div class="relative w-full max-w-md">
+                    <div class="absolute inset-0 -left-6 -top-6 rounded-[3rem] border border-white/10"></div>
+                    <div class="relative rounded-[3rem] bg-gradient-to-br from-slate-800 to-slate-900 p-8 shadow-2xl">
+                        <div class="h-64 rounded-2xl bg-slate-700/80"></div>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-emerald-500/30 blur-2xl"></div>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <section class="bg-white text-slate-900 pt-24 pb-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="inline-block rounded-full bg-emerald-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600">How we stand out</span>
+            <h2 class="mt-6 text-3xl md:text-4xl font-semibold">How is Saguaro Interactive different?</h2>
+            <p class="mt-8 text-lg leading-relaxed text-slate-700">
+                At Saguaro Interactive, we build high performance websites for businesses across the US and the Bahamas. Unlike agencies that rely on templates, we hand-code every line to maximize speed and optimize for Google's algorithm driving more traffic to your site and revenue to your business.
+            </p>
+            <p class="mt-6 text-lg leading-relaxed text-slate-700">
+                We provide a complete solution, managing all your hosting, maintenance, and updates. Our focus is on building a long term partnership, not just selling a product. Your website should be uniquely yours. Let's build it together.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900 py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                <div>
+                    <span class="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
+                        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                        Core advantages
+                    </span>
+                    <h2 class="mt-6 text-4xl font-semibold text-slate-900 sm:text-5xl">Why brands choose Saguaro Interactive</h2>
+                    <p class="mt-4 max-w-2xl text-lg text-slate-600">
+                        Every project blends handcrafted engineering, relentless optimization, and a calm partnership you can trust. Here is how our team keeps your digital presence ahead of the curve.
+                    </p>
+                </div>
+                <a href="/get-started" class="inline-flex items-center justify-center rounded-full border border-emerald-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-emerald-600 shadow-sm transition hover:bg-emerald-500 hover:text-white">
+                    Schedule a consult
+                </a>
+            </div>
+
+            <div class="mt-14 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+                <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-2 hover:border-emerald-200 hover:shadow-2xl">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-sky-500 text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h8.25c.621 0 1.125.504 1.125 1.125v6.75c0 .621-.504 1.125-1.125 1.125h-8.25A1.125 1.125 0 0 1 3 19.875v-6.75Z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12V6.75A3.75 3.75 0 0 1 9.75 3h8.25A3 3 0 0 1 21 6v4.5a1.5 1.5 0 0 1-1.5 1.5H13.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-slate-900">Performance-first builds</h3>
+                    <p class="mt-4 text-slate-600">
+                        We architect every layout with lean, maintainable code so pages paint in milliseconds and your visitors stay engaged.
+                    </p>
+                    <a href="/services" class="mt-6 inline-flex items-center text-sm font-semibold text-emerald-600 transition hover:text-emerald-500">
+                        Explore builds →
+                    </a>
+                </article>
+
+                <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-2 hover:border-emerald-200 hover:shadow-2xl">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h18M3 9h13.5M3 13.5h18M3 18h9" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-slate-900">Responsive without compromise</h3>
+                    <p class="mt-4 text-slate-600">
+                        From ultra-wide displays to palm-sized screens, your experience adapts gracefully with thoughtful interactions for every device.
+                    </p>
+                    <a href="/portfolio" class="mt-6 inline-flex items-center text-sm font-semibold text-emerald-600 transition hover:text-emerald-500">
+                        View the craft →
+                    </a>
+                </article>
+
+                <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-2 hover:border-emerald-200 hover:shadow-2xl">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-slate-900">SEO engineered foundations</h3>
+                    <p class="mt-4 text-slate-600">
+                        Structured data, schema, and lightning-fast Core Web Vitals come standard so you outrank template-driven competitors.
+                    </p>
+                    <a href="/services" class="mt-6 inline-flex items-center text-sm font-semibold text-emerald-600 transition hover:text-emerald-500">
+                        Climb the ranks →
+                    </a>
+                </article>
+
+                <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-2 hover:border-emerald-200 hover:shadow-2xl">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-500 via-pink-500 to-amber-500 text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15.75c-2.347 0-4.5 1.084-4.5 2.438V21h9v-2.812c0-1.354-2.153-2.438-4.5-2.438Zm0 0a4.125 4.125 0 1 0 0-8.25 4.125 4.125 0 0 0 0 8.25ZM4.5 10.5a7.5 7.5 0 1 1 15 0v1.125A2.625 2.625 0 0 1 18.375 14h-1.5M4.5 10.5v1.125A2.625 2.625 0 0 0 6.75 14h1.5" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-slate-900">Conversion-focused storytelling</h3>
+                    <p class="mt-4 text-slate-600">
+                        We collaborate on messaging that guides visitors from curiosity to commitment with persuasive copy and purposeful CTAs.
+                    </p>
+                    <a href="/services" class="mt-6 inline-flex items-center text-sm font-semibold text-emerald-600 transition hover:text-emerald-500">
+                        Shape your story →
+                    </a>
+                </article>
+
+                <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-2 hover:border-emerald-200 hover:shadow-2xl">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-lime-500 via-emerald-500 to-teal-500 text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l2.25 2.25L15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-slate-900">Proactive partnership</h3>
+                    <p class="mt-4 text-slate-600">
+                        Dedicated experts monitor uptime, security, and growth opportunities so you can focus on running the business.
+                    </p>
+                    <a href="/contact" class="mt-6 inline-flex items-center text-sm font-semibold text-emerald-600 transition hover:text-emerald-500">
+                        Meet the team →
+                    </a>
+                </article>
+
+                <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition hover:-translate-y-2 hover:border-emerald-200 hover:shadow-2xl">
+                    <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-400 text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25h18M4.5 6h15a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 16.5v-9A1.5 1.5 0 0 1 4.5 6Zm6 10.5h3" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-slate-900">Transparent analytics</h3>
+                    <p class="mt-4 text-slate-600">
+                        Monthly insight reports translate raw metrics into clear action items so you know exactly what is working.
+                    </p>
+                    <a href="/pricing" class="mt-6 inline-flex items-center text-sm font-semibold text-emerald-600 transition hover:text-emerald-500">
+                        See deliverables →
+                    </a>
+                </article>
+            </div>
+
+            <div class="mt-16 flex flex-col gap-4 rounded-3xl bg-slate-900 px-10 py-12 text-white shadow-xl sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h3 class="text-2xl font-semibold">Ready to put your digital presence on offense?</h3>
+                    <p class="mt-2 text-slate-300">Share your goals and we will map out a sprint-by-sprint roadmap within 48 hours.</p>
+                </div>
+                <a href="/get-started" class="inline-flex items-center justify-center rounded-full bg-emerald-500 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 shadow-lg transition hover:bg-emerald-400">
+                    Start your project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white text-slate-900 py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center">
+                <span class="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
+                    Proof in the results
+                </span>
+                <h2 class="mt-6 text-4xl font-semibold text-slate-900 sm:text-5xl">Clients who trust Saguaro Interactive</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                    We build long-term partnerships with founders, CMOs, and growth teams. Here are a few notes from the people who rely on us to keep their digital presence moving forward.
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-10 lg:grid-cols-3">
+                <article class="relative overflow-hidden rounded-3xl border border-emerald-200/50 bg-white shadow-xl transition hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-400 via-teal-400 to-sky-400"></div>
+                    <div class="flex h-full flex-col px-8 py-10">
+                        <p class="text-lg leading-relaxed text-slate-700">“Our old site loaded slowly and never captured leads. Within two weeks of relaunching with Saguaro, conversion rates doubled and we finally had a platform that reflected our brand.”</p>
+                        <div class="mt-auto flex items-center gap-4 pt-8">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-700 font-semibold">MB</div>
+                            <div>
+                                <p class="text-sm font-semibold text-slate-900">Maria Bennett</p>
+                                <p class="text-xs uppercase tracking-wide text-slate-500">Owner, Copper Canyon Med Spa</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="relative overflow-hidden rounded-3xl border border-emerald-200/50 bg-white shadow-xl transition hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-indigo-400 to-violet-500"></div>
+                    <div class="flex h-full flex-col px-8 py-10">
+                        <p class="text-lg leading-relaxed text-slate-700">“They didn’t just redesign our site—they created a marketing engine. The analytics dashboards and lead routing save our sales team hours every week.”</p>
+                        <div class="mt-auto flex items-center gap-4 pt-8">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-sky-500/20 text-sky-700 font-semibold">TS</div>
+                            <div>
+                                <p class="text-sm font-semibold text-slate-900">Tyler Singh</p>
+                                <p class="text-xs uppercase tracking-wide text-slate-500">Head of Growth, Summit Roofing Co.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="relative overflow-hidden rounded-3xl border border-emerald-200/50 bg-white shadow-xl transition hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-amber-400 via-orange-400 to-rose-500"></div>
+                    <div class="flex h-full flex-col px-8 py-10">
+                        <p class="text-lg leading-relaxed text-slate-700">“The Saguaro team feels like an extension of ours. Every sprint delivers measurable improvements for SEO and inbound leads. We recommend them to every partner we work with.”</p>
+                        <div class="mt-auto flex items-center gap-4 pt-8">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/20 text-amber-700 font-semibold">JL</div>
+                            <div>
+                                <p class="text-sm font-semibold text-slate-900">Jordan Lopez</p>
+                                <p class="text-xs uppercase tracking-wide text-slate-500">Director of Marketing, Harlow &amp; Co.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-950 text-white py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center">
+                <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300">
+                    Investment options
+                </span>
+                <h2 class="mt-6 text-4xl font-semibold sm:text-5xl">Let’s talk pricing</h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">
+                    Two handcrafted packages designed to launch your presence quickly or build a long-term growth engine. Each plan includes collaborative strategy sessions, clean code, and ongoing insight.
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-10 lg:grid-cols-2">
+                <article class="relative overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-10 shadow-2xl backdrop-blur transition hover:-translate-y-3 hover:border-emerald-400/40">
+                    <div class="flex items-center justify-between gap-4">
+                        <h3 class="text-2xl font-semibold">Launch Landing Page</h3>
+                        <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-200">Popular</span>
+                    </div>
+                    <p class="mt-4 text-slate-300">
+                        A streamlined one-page experience built to convert visitors into leads within days.
+                    </p>
+                    <ul class="mt-8 space-y-4 text-sm text-slate-200">
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Custom hero, services, testimonials, and contact CTA</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Copywriting polish and on-brand visual direction</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Analytics, SEO-ready structure, and fast hosting setup</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>Two rounds of revisions and launch support</li>
+                    </ul>
+                    <div class="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8 text-left">
+                        <div>
+                            <span class="text-4xl font-semibold text-white">$1,500</span>
+                            <span class="ml-3 text-sm text-slate-300">one-time build</span>
+                        </div>
+                        <span class="text-sm text-slate-400">+$25/mo managed hosting &amp; monitoring</span>
+                        <a href="/get-started" class="inline-flex w-full items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 shadow-lg transition hover:bg-emerald-400">
+                            Book this build
+                        </a>
+                    </div>
+                </article>
+
+                <article class="relative overflow-hidden rounded-4xl border border-emerald-500/40 bg-white text-slate-900 p-10 shadow-2xl transition hover:-translate-y-3">
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-200 via-white to-slate-100"></div>
+                    <div class="flex items-center justify-between gap-4">
+                        <h3 class="text-2xl font-semibold text-slate-900">Full Suite Growth Site</h3>
+                        <span class="rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-900">Best value</span>
+                    </div>
+                    <p class="mt-4 text-slate-600">
+                        A multi-page presence with automations and CRM-ready integrations, built for continual campaigns.
+                    </p>
+                    <ul class="mt-8 space-y-4 text-sm text-slate-700">
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>Home, services, case studies, resources, and contact flows</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>Custom CMS for blogs or landing pages with gated content</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>CRM &amp; marketing automation integrations (HubSpot, ConvertKit)</li>
+                        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>Quarterly growth reviews and roadmap planning</li>
+                    </ul>
+                    <div class="mt-10 flex flex-col gap-6 border-t border-emerald-200 pt-8 text-left">
+                        <div>
+                            <span class="text-4xl font-semibold text-slate-900">$4,200</span>
+                            <span class="ml-3 text-sm text-slate-600">phased investment</span>
+                        </div>
+                        <span class="text-sm text-slate-500">+$25/mo managed hosting &amp; monitoring</span>
+                        <a href="/get-started" class="inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition hover:bg-slate-800">
+                            Design my platform
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="mt-20 text-center text-sm text-slate-400">
+                Need enterprise support or e-commerce? <a href="/contact" class="font-semibold text-emerald-400 hover:text-emerald-300">Request a bespoke quote →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-200 pt-16 pb-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid gap-12 lg:grid-cols-[280px_1fr]">
+                <div class="space-y-4">
+                    <a href="/" class="inline-flex items-center gap-3 text-xl font-semibold text-white">
+                        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold">SI</span>
+                        Saguaro Interactive
+                    </a>
+                    <p class="text-sm text-slate-400">Custom-coded web experiences that help ambitious teams convert more traffic and own their growth.</p>
+                </div>
+                <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1fr_1fr]">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-300">Quick links</h3>
+                        <ul class="mt-4 space-y-3 text-sm text-slate-400">
+                            <li><a href="/services" class="transition hover:text-emerald-400">Services</a></li>
+                            <li><a href="/portfolio" class="transition hover:text-emerald-400">Portfolio</a></li>
+                            <li><a href="/pricing" class="transition hover:text-emerald-400">Pricing</a></li>
+                            <li><a href="/blog" class="transition hover:text-emerald-400">Insights</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-300">Contact</h3>
+                        <ul class="mt-4 space-y-3 text-sm text-slate-400">
+                            <li><a href="mailto:hello@saguarointeractive.com" class="transition hover:text-emerald-400">hello@saguarointeractive.com</a></li>
+                            <li><a href="tel:+14805551234" class="transition hover:text-emerald-400">(480) 555-1234</a></li>
+                            <li>Tempe, Arizona · Serving the United States &amp; The Bahamas</li>
+                            <li><a href="/contact" class="transition hover:text-emerald-400">Schedule a discovery call →</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-slate-800 pt-6 text-sm text-slate-500 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <p>© 2024 Saguaro Interactive. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="/privacy" class="transition hover:text-emerald-400">Privacy Policy</a>
+                    <span class="h-3 w-px bg-slate-700"></span>
+                    <a href="/terms" class="transition hover:text-emerald-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
